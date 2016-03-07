@@ -1,0 +1,14 @@
+/* CSS Document */
+body{ background:#fff url(../images/zuopin/caseInfo/bodybg.jpg) repeat-x;}
+
+.top{ height:98px;}
+.top h1{  background:url(../images/zuopin/caseInfo/logo.png) no-repeat; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/caseInfo/logo.png",enabled=true, sizingMethod="crop");}
+
+
+
+.btns{ display:inline-block; width:100%; padding:19px 0;}
+.btns p{ float:right; width:500px; text-align:right;}
+.btns .back{ float:left;}
+.content{ border-top:dotted #dcdcdc 1px; display:inline-block; width:100%; text-align:center; padding-top:20px;}
+.content h2{ font-size:14px; color:#5c5c5c; padding:10px 0; white-space:nowrap;}
+.content p{ display:inline-block; width:940px; text-align:left; color:#888888; line-height:20px;word-wrap:break-word; padding:10px 0;}

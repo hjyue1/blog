@@ -1,0 +1,24 @@
+/* CSS Document */
+body{ background:#fff url(../images/zuopin/service/bodybg.jpg) repeat-x;}
+
+.top{ height:252px;}
+#ppt ul li{top:0px; height:221px; background:url(../images/zuopin/service/ppt.jpg) no-repeat;}
+
+.s_des{ padding-top:31px; display:inline-block;}
+.s_des .t1{ width:500px;  display:inline-block; height:19px; background-image:url(../images/zuopin/service/title.png); background-repeat:no-repeat; text-indent:-9999px; }
+.s_des .t2{ background-position:0 -19px;}
+.s_des .t3{ background-position:0 -38px; margin-left:270px;}
+.s_des .t4{ background-position:0 -57px; }
+.s_des p{ display:inline-block; width:970px; line-height:25px; color:#686868; font-size:14px; padding:15px 0 60px 0;}
+.s_des p span{ font-size:14px; color:#54b30d;}
+.s_des .servImg{ display:inline-block;width:100%; text-align:center; padding:38px 0 72px 0;}
+
+.hasServ{  display:inline-block; width:100%; text-align:center; padding-bottom:38px; }
+
+.card{  display:inline-block; width:100%; padding:28px 0 56px 0;}
+.card li{ float:left;width:305px; margin-right:20px; display:inline; overflow:hidden; }
+.card img{ float:left;}
+.card div{ float:left; margin-left:8px; display:inline; width:175px; height:94px; padding:10px 0 0 12px; background:url(../images/zuopin/service/cardbg.png) no-repeat; overflow:hidden;}
+.card div p{ padding:0; width:100%; line-height:20px; font-size:12px;}
+.card div .des{ color:#9a9a9a; }
+

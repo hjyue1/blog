@@ -1,0 +1,13 @@
+/* CSS Document */
+
+.top{ height:221px;}
+#ppt ul li{top:0; height:221px; background:url(../images/zuopin/case/ppt.jpg) no-repeat;}
+
+.cases{ display:inline-block; padding:17px 0 33px 0;}
+.cases div{ float:left; width:214px; height:250px; overflow:hidden; border:solid #dfdfdf 1px; margin:32px 21px 0 9px; display:inline; text-align:center;}
+.cases div:hover{ background:#f2f2f2;}
+.cases div img{ display:inline-block; width:214px; }
+.cases div strong{ display:inline-block; width:200px; line-height:35px; height:35px; padding-top:5px; overflow:hidden; word-wrap:break-word; color:#2cacf5; font-size:14px;}
+.cases div strong a{color:#2cacf5;}
+.cases div p{ display:inline-block; width:200px; text-align:left; height:40px; overflow:hidden; line-height:20px; color:#989898;}
+
