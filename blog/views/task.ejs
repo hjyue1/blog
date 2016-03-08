@@ -18,6 +18,13 @@
     <tr>
         <th><a href="/tasknew">添加数据</a></th> 
     </tr>
+    <% if(typeof flash != 'undefined'){ if(flash.warning){%>
+    <div class="alert-messag warning"><p><%=flash.warning%></p></div>
+    <%}if(flash.info){%>
+    <div class="alert-message success" data-alert='alert'>
+        <p><%=flash.info%></p>
+    </div>
+    <%}}%>
     <tr>
     <th>Task</th>
         <% for(a in docs){%>

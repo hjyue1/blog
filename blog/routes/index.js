@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var flash= require('connect-flash')
 //数据库链接
 var Schema= mongoose.Schema;
 var ObjectId=Schema.ObjectId;
@@ -35,8 +36,10 @@ router.post('/task',function(req,res,next){
 	 console.log(req.body);
   Taskk.create(req.body,function(err) {
       if(!err){
+    flash("info","数据添加成功")
      res.redirect('/task')
    }else{
+    flash("warning",err)
      console.log(err);
      res.redirect('/task/new');
    }
