@@ -30,7 +30,7 @@ router.get('/task', function(req, res){
   });
 });
 
-//接受POST数据
+//加入数据到数据库POST请求
 router.post('/task',function(req,res,next){
 	 console.log(req.body);
   Taskk.create(req.body,function(err) {
@@ -61,6 +61,7 @@ router.get('/task/:id/edit',function(req,res){
   });
 });
 
+//修改
 router.post('/task/:id',function(req,res){
   Taskk.findById(req.params.id,function(err,doc){
     doc.city=req.body.city;
@@ -74,7 +75,7 @@ router.post('/task/:id',function(req,res){
     });
   });
 });
-
+//删除
 router.post('/task/:id/del',function(req,res){
   Taskk.findById(req.params.id,function(err,doc){
     if (!err) {
