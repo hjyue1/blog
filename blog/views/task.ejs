@@ -21,18 +21,31 @@
     <link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 <body>
-<section id="">
+<section>
 <div class="container">
 <h1> Your task</h1>
 <% if(docs.length){%>
 <table class="table table-striped">
     <tr>
-        <th>Task</th>
+        <th><a href="/tasknew">添加数据</a></th> 
+    </tr>
+    <tr>
+    <th>Task</th>
         <% for(a in docs){%>
         <tr>
-        <td> 
-        <%=docs[a]%>
-        </td>
+            <td> 
+            <%=docs[a]%>
+            </td>
+            <td>
+                <a href="/task/<%=docs[a].id%>/edit" class="btn btn-warning">Edit</a>
+            </td>
+            <td>
+                <form action="/task/<%=docs[a].id%>/del" method="post">
+                    
+                    <button class="btn" type="submit">Delete</button>
+                </form>
+            </td>
+
         </tr>
         <%}%>
     </tr>

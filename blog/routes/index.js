@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-
+//数据库链接
 var Schema= mongoose.Schema;
 var ObjectId=Schema.ObjectId;
 var Task= new Schema({
@@ -20,6 +20,7 @@ router.get('/404', function(req, res, next) {
 });
 
 
+//查看数据库
 router.get('/task', function(req, res){
   Taskk.find({}, function (err, docs) {
     res.render('task', {
@@ -29,7 +30,7 @@ router.get('/task', function(req, res){
   });
 });
 
-//写入数据
+//接受POST数据
 router.post('/task',function(req,res,next){
 	 console.log(req.body);
   Taskk.create(req.body,function(err) {
@@ -42,8 +43,53 @@ router.post('/task',function(req,res,next){
   })
 });
 
+//写入数据页面
 router.get('/tasknew',function(req,res){
 	res.render('tasknew',{title:'New Task'})
 });
+
+
+//编辑数据页面
+router.get('/task/:id/edit',function(req,res){
+  console.log(req.params.id);
+  Taskk.findById(req.params.id,function(err,doc){
+    console.log(doc);
+    res.render('edit',{
+      title:'Edit视图',
+      task:doc
+    });
+  });
+});
+
+router.post('/task/:id',function(req,res){
+  Taskk.findById(req.params.id,function(err,doc){
+    doc.city=req.body.city;
+    doc.save(function(err){
+      if (!err) {
+        res.redirect('/task');
+      }
+      else{
+        console.log(err);
+      }
+    });
+  });
+});
+
+router.post('/task/:id/del',function(req,res){
+  Taskk.findById(req.params.id,function(err,doc){
+    if (!err) {
+        doc.remove(function(){
+      res.redirect('/task');
+    })
+      }else{
+          console.log(err);
+      }
+  
+  });
+});
+
+
+
+
 
 module.exports = router;

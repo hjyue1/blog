@@ -8,36 +8,37 @@
     <meta name="author" content="">
     <title><%= title %> </title>
    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="/css/font-awesome.min.css" rel="stylesheet"> -->
     <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
     <script src="/js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/img/ico/favicon.ico">
+<!--     <link rel="shortcut icon" href="/img/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/ico/apple-touch-icon-57-precomposed.png"> -->
 </head><!--/head-->
 <body>
 <section>
 <div class="container">
-<h1> New task view</h1>
-<form action="/task" method='post' class="form-inline">
-    <fieldset>
-        <legend>Add a task</legend>
-    </fieldset>
-    <div class="form-group">
-        <label for="1">Task</label>
-        <div class="input">
-            <span>城市</span><input type="text" name='city' class="form-control">
-            <span>人数</span><input type="text" name='num' class="form-control">
-        </div>
-    </div>
-    <div class='actions'>
-        <input type="submit" value="Save" class='btn btn-primary'>
-        <button type='reset' class='btn btn-danger'>Cancel</button>
-    </div>
+<h1> Edit视图</h1>
+<form action="/task/<%=task.id%>" method='post' class="form-inline">
+   <input type="hidden" name="_method" value="PUT">
+   <fieldset>
+       <legend>Editing task</legend>
+       <div class="clearfix">
+           <label for="123">Task</label>
+           <div class="input">
+               <input type="text" name="city" class="form-control" value="<%=task.city%>">
+               <input type="text" name="cum" class="form-control" value="<%=task.num%>">
+           </div>
+       </div>
+       <div class="actions">
+           <input type="submit" value="Save" class="btn btn-primary">
+           <button type="reset" class="btn btn-danger">Cancel</button>
+       </div>
+   </fieldset>
 </form>
 </div>
 </section>

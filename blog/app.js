@@ -47,6 +47,10 @@ app.use('/404', routes);
 app.use('/users', users);
 app.use('/task', routes);
 app.use('/tasknew', routes);
+app.use('/task/:id/del',routes);
+app.use('/task/:id/edit', routes);
+app.use('/task/:id', routes);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   return res.redirect('/404');
