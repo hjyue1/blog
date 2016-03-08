@@ -7,6 +7,26 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+//链接数据库
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/liudosjk',function(err){
+  if (!err) {
+    console.log('链接MongoDB成功')
+  }else{
+    throw err
+  }
+});
+//定义文档
+
+var fs =require('fs');
+fs.readFile('./sj/file.txt','utf-8',function(err,data){
+  if(!err){
+    console.log(data)
+  }else{
+    throw err;
+  }
+});
+
 
 var app = express();
 
@@ -25,7 +45,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/404', routes);
 app.use('/users', users);
-
+app.use('/task', routes);
+app.use('/tasknew', routes);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   return res.redirect('/404');
