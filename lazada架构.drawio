@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-18T12:47:28.500Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="oGKL9qAp3Qc8jEeWpRvL" version="21.3.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-18T12:48:09.084Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="nagct1MJ6rVn7hYGmOPX" version="21.3.2" type="github">
   <diagram name="第 1 页" id="XuGTz_PL9YP8hjZvDaqw">
     <mxGraphModel dx="1299" dy="890" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -46,7 +46,7 @@
         <mxCell id="48PvAtG6RpG-dw5Pf5PI-19" value="" style="group" vertex="1" connectable="0" parent="48PvAtG6RpG-dw5Pf5PI-55">
           <mxGeometry y="189" width="165.96000000000004" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="48PvAtG6RpG-dw5Pf5PI-14" value="网关" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;strokeWidth=2;dashed=1;" vertex="1" parent="48PvAtG6RpG-dw5Pf5PI-19">
+        <mxCell id="48PvAtG6RpG-dw5Pf5PI-14" value="BFF层 / 网关" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;strokeWidth=2;dashed=1;" vertex="1" parent="48PvAtG6RpG-dw5Pf5PI-19">
           <mxGeometry width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="48PvAtG6RpG-dw5Pf5PI-15" value="数据缓存" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="48PvAtG6RpG-dw5Pf5PI-19">
